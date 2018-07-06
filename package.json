@@ -1,6 +1,6 @@
 {
-  "name": "timeout-request",
-  "version": "0.0.1",
+  "name": "timeout-r2",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/patrickleet/timeout-request/issues"
   },
-  "homepage": "https://github.com/patrickleet/timeout-request#readme"
+  "homepage": "https://github.com/patrickleet/timeout-request#readme",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "r2": "^2.0.1"
+  }
 }
