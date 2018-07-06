@@ -1,14 +1,16 @@
 {
   "name": "timeout-r2",
-  "version": "0.0.2",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrickleet/timeout-request.git"
+    "url": "https://github.com/patrickleet/timeout-request.git"
   },
   "author": "patrickleet",
   "license": "ISC",
@@ -19,5 +21,9 @@
   "dependencies": {
     "debug": "^3.1.0",
     "r2": "^2.0.1"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.6.3",
+    "travis-deploy-once": "^5.0.1"
   }
 }
