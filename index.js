@@ -14,7 +14,8 @@ module.exports = function timeoutRequest ({
       }, timeout)
 
       try {
-        let data = await r2[method](endpoint).json
+        let res = await r2[method](endpoint).response
+        const data = await res.json()
         debug({ msg: 'timeout request succeeded', method, endpoint, timeout })
         resolve(data)
       } catch (e) {
