@@ -18,7 +18,7 @@ module.exports = function timeoutRequest ({
         debug({ msg: 'timeout request succeeded', method, endpoint, timeout })
         resolve(data)
       } catch (e) {
-        debug.error({ msg: 'timeout request failed', method, endpoint, timeout, e })
+        debug({ msg: 'timeout request failed', method, endpoint, timeout, e })
         reject(new Error(`request failed - ${e.message}`))
       }
     })
