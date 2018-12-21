@@ -1,23 +1,22 @@
 language: node_js
-node_js:
-  - 8
-  - 10
-  - 11
-cache: npm
+
 notifications:
   email: false
-before_install:
-  - npm install -g codecov greenkeeper-lockfile
-before_script: greenkeeper-lockfile-update
-script:
-  - npm run test
-  - codecov
-after_script: greenkeeper-lockfile-upload
-branches:
-  except:
-    - '/^v\d+\.\d+\.\d+$/'
+
 jobs:
   include:
+    - stage: test
+      node_js:
+        - 8
+        - 10
+        - 11
+      before_install:
+        - npm install -g codecov greenkeeper-lockfile
+      before_script: greenkeeper-lockfile-update
+      script:
+        - npm run test
+        - codecov
+      after_script: greenkeeper-lockfile-upload
     - stage: deploy
       if: branch == master && !fork
       node_js: '8.9.1' # pre-installed version
