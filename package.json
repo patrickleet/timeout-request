@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -23,8 +21,6 @@
     "r2": "^2.0.1"
   },
   "devDependencies": {
-    "jest": "^23.3.0",
-    "semantic-release": "^15.7.2",
-    "travis-deploy-once": "^5.0.1"
+    "jest": "^23.3.0"
   }
 }
