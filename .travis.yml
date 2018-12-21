@@ -22,5 +22,5 @@ jobs:
       if: branch == master && !fork
       node_js: '8.9.1' # pre-installed version
       script:
-        - npm install -g semantic-release@^15
+        - npm install -g semantic-release
         - semantic-release
