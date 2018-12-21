@@ -1,4 +1,8 @@
 language: node_js
+node_js:
+  - 8
+  - 10
+  - 11
 
 notifications:
   email: false
@@ -6,10 +10,6 @@ notifications:
 jobs:
   include:
     - stage: test
-      node_js:
-        - 8
-        - 10
-        - 11
       before_install:
         - npm install -g codecov greenkeeper-lockfile
       before_script: greenkeeper-lockfile-update
@@ -19,7 +19,7 @@ jobs:
       after_script: greenkeeper-lockfile-upload
     - stage: deploy
       if: branch == master && !fork
-      node_js: '8.9.1' # pre-installed version
+      node_js: node # pre-installed version
       script:
         - npm install -g semantic-release
         - semantic-release
